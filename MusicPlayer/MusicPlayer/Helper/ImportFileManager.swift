@@ -7,7 +7,7 @@ import UniformTypeIdentifiers
 struct ImportFileManager: UIViewControllerRepresentable {
     
     @Binding var songs: [SongModel]
-    
+
     /// Координатор управляет задачами между SwiftUI и UIKit
     func makeCoordinator() -> Coordinator {
         Coordinator(parent: self)
