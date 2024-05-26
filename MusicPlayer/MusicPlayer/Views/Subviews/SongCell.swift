@@ -6,7 +6,7 @@ struct SongCell: View {
     let song: SongModel
     let durationFormated: (TimeInterval) -> String
     
-    // MARK: - Body
+    
     var body: some View {
         HStack {
             // сover
