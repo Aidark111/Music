@@ -2,13 +2,15 @@ import SwiftUI
 
 struct PlayerView: View {
     
-    // MARK: - Properties
+    // state and model objects
     @StateObject var vm = ViewModel()
     @State private var showFiles = false
     @State private var showFullPlayer = false
     @Namespace private var playerAnimation
     
-    var frameImage: CGFloat {
+
+
+    var frameImage: CGFloat {      // dynamic frame size for the player based on its state
         showFullPlayer ? 320 : 50
     }
     
@@ -21,8 +23,8 @@ struct PlayerView: View {
                 BackgroundView()
 
                 VStack {
-                    
-                    // MARK: - List Of Songs
+
+                   // list of songs with delete play
                     List {
                         ForEach(vm.songs) { song in
                             SongCell(song: song, durationFormated: vm.durationFormatted)
@@ -36,7 +38,7 @@ struct PlayerView: View {
                     
                     Spacer()
                     
-                    // MARK: - Player
+                    // mini or full player view
                     if vm.currentSong != nil {
 
                         Player()

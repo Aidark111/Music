@@ -8,7 +8,7 @@ struct DurationFontModifier: ViewModifier {
     }
 }
 
-extension View {
+extension View {   // applies duration font style
     func durationFont() -> some View {
         self.modifier(DurationFontModifier())
     }

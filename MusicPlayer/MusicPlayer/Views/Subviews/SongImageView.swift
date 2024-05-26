@@ -2,7 +2,7 @@ import SwiftUI
 
 struct SongImageView: View {
     
-    // MARK: - Properties
+  // properties for image data and display size
     let imageData: Data?
     let size: CGFloat
     

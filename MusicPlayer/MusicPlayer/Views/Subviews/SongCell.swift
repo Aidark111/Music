@@ -2,17 +2,17 @@ import SwiftUI
 
 struct SongCell: View {
     
-    // MARK: - Properties
+  // properties for song data and formatting
     let song: SongModel
     let durationFormated: (TimeInterval) -> String
     
     // MARK: - Body
     var body: some View {
         HStack {
-            /// Cover
+            // сover
             SongImageView(imageData: song.coverImage, size: 60)
             
-            /// Descroption
+            // Descroption
             VStack(alignment: .leading) {
                 Text(song.name)
                     .nameFont()
@@ -22,7 +22,7 @@ struct SongCell: View {
             
             Spacer()
             
-            /// Duration
+            // Duration
             if let duration = song.duration {
                 Text(durationFormated(duration))
                     .artistFont()
